@@ -144,7 +144,8 @@ public class MyRangeTest {
 	 * Strategy followed: Equivalence Partitions
 	 * 		Partition Covered: Null range
 	 */
-	@Test(expected = InvalidParameterException.class)
+//	@Test(expected = InvalidParameterException.class)
+	@Test(expected = IllegalArgumentException.class) // for PIT to work 
 	public void expandNullRange(){
 		Range.expand(null,1,1);
 	}

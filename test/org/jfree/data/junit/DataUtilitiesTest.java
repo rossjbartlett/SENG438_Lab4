@@ -29,7 +29,7 @@ public class DataUtilitiesTest
 		values = null;
 	}
 	
-	@Test(expected = NullPointerException.class) // added to make test pass, make PIT run
+	@Test(expected = NullPointerException.class) // added to make test error-free, let PIT run
 	public void testNullDataColumnTotal()
 	{
 		assertEquals(0.0, DataUtilities.calculateColumnTotal(null, 0), 0.0000001d);
@@ -41,7 +41,7 @@ public class DataUtilitiesTest
 		assertEquals(5.0, DataUtilities.calculateColumnTotal(values, 0), 0.0000001d);
 	}
 	
-	@Test(expected=IndexOutOfBoundsException.class) // added to make test pass, make PIT run
+	@Test(expected=IndexOutOfBoundsException.class) // added to make test error-free, make PIT run
 	public void testValidDataInvalidColumnColumnTotal()
 	{
 		assertEquals(0.0, DataUtilities.calculateColumnTotal(values, 1), 0.0000001d);

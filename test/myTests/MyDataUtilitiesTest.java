@@ -37,7 +37,7 @@ public class MyDataUtilitiesTest {
 		final Values2D values = mockingContext.mock(Values2D.class);
 		mockingContext.checking(new Expectations() {
 			{
-				oneOf(values).getRowCount();
+				one(values).getRowCount();
 				will(returnValue(5));
 			}
 		});
@@ -448,7 +448,7 @@ public class MyDataUtilitiesTest {
 		final Values2D values = mockingContext.mock(Values2D.class);
 		mockingContext.checking(new Expectations() {
 			{
-				one(values).getColumnCount();
+				of(values).getColumnCount();
 				will(returnValue(5));
 			}
 		});
