@@ -66,6 +66,9 @@ public abstract class DataUtilities {
      */
     public static double calculateColumnTotal(Values2D data, int column) {
         double total = 0.0;
+        System.out.println("****data "+data);
+        System.out.println("****column "+column);
+
         int rowCount = data.getRowCount();
         for (int r = 0; r < rowCount; r++) {
             Number n = data.getValue(r, column);

@@ -1,4 +1,4 @@
-package org.jfree.data.junit;
+package myTests;
 
 import static org.junit.Assert.*;
 import java.security.InvalidParameterException;
