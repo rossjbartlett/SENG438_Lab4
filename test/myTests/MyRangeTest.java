@@ -275,7 +275,7 @@ public class MyRangeTest {
 	{
 		Range toTest = new Range(0, 10);
 		boolean result = toTest.intersects(10, 15);
-		assertEquals("Testing intersects() where the provided lower bound == toTests upper bound", true, result);
+		assertEquals("Testing intersects() where the provided lower bound == toTests upper bound", false, result);
 		toTest = null;
 	}
 	/*
@@ -317,7 +317,7 @@ public class MyRangeTest {
 	{
 		Range toTest = new Range(0, 10);
 		boolean result = toTest.intersects(-10, 0);
-		assertEquals("Testing intersects() where the provided Upper bound == toTests lower bound", true, result);
+		assertEquals("Testing intersects() where the provided Upper bound == toTests lower bound", false, result);
 		toTest = null;
 	}
 	/*
