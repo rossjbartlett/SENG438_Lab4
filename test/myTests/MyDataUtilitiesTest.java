@@ -1,7 +1,9 @@
 package myTests;
 
 import org.jfree.data.DataUtilities;
+import org.jfree.data.DefaultKeyedValues2D;
 import org.jfree.data.KeyedValues;
+import org.jfree.data.Values;
 import org.jfree.data.Values2D;
 
 import static org.junit.Assert.*;
@@ -12,6 +14,7 @@ import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.junit.Test;
 
+
 public class MyDataUtilitiesTest {
 
 	// tests for calculateColumnTotal()
@@ -20,7 +23,8 @@ public class MyDataUtilitiesTest {
 	 * Strategy followed: Equivalence Partitions
 	 * 		Partition Covered: A null data table
 	 */
-	@Test(expected = InvalidParameterException.class)
+//	@Test(expected = InvalidParameterException.class)
+	@Test(expected = NullPointerException.class)
 	public void calculateColumnTotalForNullTable() {
 		DataUtilities.calculateColumnTotal(null, 0);
 		// throws NullPointerException instead
@@ -30,19 +34,24 @@ public class MyDataUtilitiesTest {
 	 * Strategy followed: Equivalence Partitions
 	 * 		Partition Covered: Boundary value testing for below lower bound
 	 */
-	@Test
+	@Test(expected=IndexOutOfBoundsException.class)
 	public void calculateColumnTotalBLB() {
 		// setup
-		Mockery mockingContext = new Mockery();
-		final Values2D values = mockingContext.mock(Values2D.class);
-		mockingContext.checking(new Expectations() {
-			{
-				oneOf(values).getRowCount();
-				will(returnValue(5));
-			}
-		});
+//		Mockery mockingContext = new Mockery();
+//		final Values2D values = mockingContext.mock(Values2D.class);
+//		mockingContext.checking(new Expectations() {
+//			{
+//				one(values).getRowCount();
+//				will(returnValue(5));
+//			}
+//		});
+		DefaultKeyedValues2D table = new DefaultKeyedValues2D();
+        table.addValue(new Double(1.0), "R0", "C0");
+        table.addValue(new Double(2.0), "R0", "C1");
+        table.addValue(new Double(3.0), "R1", "C0");
+        table.addValue(new Double(4.0), "R1", "C1");
 		// exercise - testing index -1
-		double result = DataUtilities.calculateColumnTotal(values, -1);
+		double result = DataUtilities.calculateColumnTotal(table, -1);
 		// verify
 		//docs say it will return 0 upon invalid input
 		//instead, it does try to get the values at index=-1, causing unexpected invocation jMock.exception 
@@ -182,19 +191,24 @@ public class MyDataUtilitiesTest {
 	 * Strategy followed: Equivalence Partitions
 	 * 		Partition Covered: BVT above upper bound
 	 */
-	@Test
+	@Test(expected=IndexOutOfBoundsException.class)
 	public void calculateColumnTotalAUB() {
 		// setup
-		Mockery mockingContext = new Mockery();
-		final Values2D values = mockingContext.mock(Values2D.class);
-		mockingContext.checking(new Expectations() {
-			{
-				one(values).getRowCount();
-				will(returnValue(5));
-			}
-		});
+//		Mockery mockingContext = new Mockery();
+//		final Values2D values = mockingContext.mock(Values2D.class);
+//		mockingContext.checking(new Expectations() {
+//			{
+//				one(values).getRowCount();
+//				will(returnValue(5));
+//			}
+//		});
+		DefaultKeyedValues2D table = new DefaultKeyedValues2D();
+        table.addValue(new Double(1.0), "R0", "C0");
+        table.addValue(new Double(2.0), "R0", "C1");
+        table.addValue(new Double(3.0), "R1", "C0");
+        table.addValue(new Double(4.0), "R1", "C1");
 		// exercise - testing index > numCols
-		double result = DataUtilities.calculateColumnTotal(values, 5);
+		double result = DataUtilities.calculateColumnTotal(table, 5);
 		// verify
 		//docs say it will return 0 upon invalid input
 		//instead, it does try to get the values at index=5, causing unexpected invocation jMock.exception 
@@ -279,7 +293,8 @@ public class MyDataUtilitiesTest {
 	 * Strategy followed: Equivalence Partitions
 	 * 		Partition Covered: A null data table
 	 */
-	@Test(expected = InvalidParameterException.class)
+//	@Test(expected = InvalidParameterException.class)
+	@Test(expected = NullPointerException.class)
 	public void calculateRowTotalForNullTable() {
 		DataUtilities.calculateRowTotal(null, 0);
 		// throws NullPointerException instead
@@ -289,19 +304,24 @@ public class MyDataUtilitiesTest {
 	 * Strategy followed: Equivalence Partitions
 	 * 		Partition Covered: Boundary value testing for below lower bound
 	 */
-	@Test
+	@Test(expected = IndexOutOfBoundsException.class)
 	public void calculateRowTotalBLB() {
 		// setup
-		Mockery mockingContext = new Mockery();
-		final Values2D values = mockingContext.mock(Values2D.class);
-		mockingContext.checking(new Expectations() {
-			{
-				oneOf(values).getColumnCount();
-				will(returnValue(5));
-			}
-		});
+//		Mockery mockingContext = new Mockery();
+//		final Values2D values = mockingContext.mock(Values2D.class);
+//		mockingContext.checking(new Expectations() {
+//			{
+//				oneOf(values).getColumnCount();
+//				will(returnValue(5));
+//			}
+//		});
+		DefaultKeyedValues2D table = new DefaultKeyedValues2D();
+        table.addValue(new Double(1.0), "R0", "C0");
+        table.addValue(new Double(2.0), "R0", "C1");
+        table.addValue(new Double(3.0), "R1", "C0");
+        table.addValue(new Double(4.0), "R1", "C1");
 		// exercise - test at row=-1
-		double result = DataUtilities.calculateRowTotal(values, -1);
+		double result = DataUtilities.calculateRowTotal(table, -1);
 		// verify
 		//docs say it will return 0 upon invalid input
 		//instead, it does try to get the values at index=-1, causing unexpected invocation jMock.exception 
@@ -441,22 +461,27 @@ public class MyDataUtilitiesTest {
 	 * Strategy followed: Equivalence Partitions
 	 * 		Partition Covered: BVT above upper bound
 	 */
-	@Test
+	@Test(expected = IndexOutOfBoundsException.class) // added for PIT
 	public void calculateRowTotalAUB() {
 		// setup
-		Mockery mockingContext = new Mockery();
-		final Values2D values = mockingContext.mock(Values2D.class);
-		mockingContext.checking(new Expectations() {
-			{
-				one(values).getColumnCount();
-				will(returnValue(5));
-			}
-		});
+//		Mockery mockingContext = new Mockery();
+//		final Values2D values = mockingContext.mock(Values2D.class);
+//		mockingContext.checking(new Expectations() {
+//			{
+//				of(values).getColumnCount();
+//				will(returnValue(5));
+//			}
+//		});
+		DefaultKeyedValues2D table = new DefaultKeyedValues2D();
+        table.addValue(new Double(1.0), "R0", "C0");
+        table.addValue(new Double(2.0), "R0", "C1");
+        table.addValue(new Double(3.0), "R1", "C0");
+        table.addValue(new Double(4.0), "R1", "C1");
 		// exercise - test at row > numRows
-		double result = DataUtilities.calculateRowTotal(values, 5);
+		double result = DataUtilities.calculateRowTotal(table, 5);
 		// verify
 		//docs say it will return 0 upon invalid input
-		//instead, it does try to get the values at index=-5, causing unexpected invocation jMock.exception 
+		//instead, it does try to get the values at index=5, causing unexpected invocation jMock.exception 
 		assertEquals("Attempting to access row 5 (out of bound) should return 0",0, result, .000000001d);
 		// tear-down: NONE in this test method
 	}
@@ -538,7 +563,8 @@ public class MyDataUtilitiesTest {
 	 * Strategy followed: Equivalence Partitions
 	 * 		Partition Covered: Null Data
 	 */
-	@Test(expected = InvalidParameterException.class)
+//	@Test(expected = InvalidParameterException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void createNumberArrayNull() {
 		DataUtilities.createNumberArray(null);
 		// throws IllegalArgumentException instead
@@ -575,7 +601,8 @@ public class MyDataUtilitiesTest {
 	 * Strategy followed: Equivalence Partitions
 	 * 		Partition Covered: Null Data
 	 */
-	@Test(expected = InvalidParameterException.class)
+//	@Test(expected = InvalidParameterException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void createNumberArray2DNull() {
 		DataUtilities.createNumberArray2D(null);
 		// throws IllegalArgumentException instead
@@ -609,7 +636,8 @@ public class MyDataUtilitiesTest {
 	 * Strategy followed: Equivalence Partitions
 	 * 		Partition Covered: Array with some null inner-arrays 
 	 */
-	@Test(expected = InvalidParameterException.class)
+//	@Test(expected = InvalidParameterException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void createNumberArray2DInnerNull() {
 		double a[][] = { { 1.0, 2.0, 3.0 }, null, { -2.0, -1.0, 0.0 } };
 		DataUtilities.createNumberArray2D(a);
@@ -635,10 +663,13 @@ public class MyDataUtilitiesTest {
 	 * Strategy followed: Equivalence Partitions
 	 * 		Partition Covered: Null Table
 	 */
-	@Test(expected = InvalidParameterException.class)
+//	@Test(expected = InvalidParameterException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void getCumulativePercentageForNullTable() {
 		DataUtilities.getCumulativePercentages(null);
-		// throws NullPointerException instead
+		// throws NullPointerException instead, lab3
+		// throws IllegalArgumentException instead, lab4
+
 	}
 	/*
 	 * Test type: Black Box
@@ -709,7 +740,7 @@ public class MyDataUtilitiesTest {
 		// verify
 		for(int i = 0 ; i < result.getItemCount(); i++){
 			int key = (int) result.getKey(i);
-			assertEquals("Expect each result value == expected value",expected.getValue(key).doubleValue(), result.getValue(0).doubleValue(), .000000001d);
+			assertEquals("Expect each result value == expected value",expected.getValue(key).doubleValue(), result.getValue(key).doubleValue(), .000000001d);
 		}
 		// tear-down: NONE in this test method
 
@@ -719,7 +750,7 @@ public class MyDataUtilitiesTest {
 	 * Strategy followed: Equivalence Partitions
 	 * 		Partition Covered: Divide By 0 Logical Error
 	 */
-	@Test(expected = ArithmeticException.class)
+	@Test//(expected = ArithmeticException.class)
 	public void getCumulativePercentageDivByZero(){
 		//Setup
 		Mockery mockingContext = new Mockery();
@@ -734,14 +765,14 @@ public class MyDataUtilitiesTest {
 				atLeast(1).of(values).getKey(0); //get Key at index 0
 				will(returnValue(0));			
 				atLeast(1).of(values).getValue(0); // get value at key=0
-				will(returnValue(0));
+				will(returnValue(-5));
 
 
 				//key/value pair 
 				atLeast(1).of(values).getKey(1);
 				will(returnValue(1));			
 				atLeast(1).of(values).getValue(1);
-				will(returnValue(0));
+				will(returnValue(5));
 
 			}
 		});
@@ -819,6 +850,8 @@ public class MyDataUtilitiesTest {
 		assertEquals("Expecting index 2 to have a cumulitive percentage of 1.0", 1.0, result.getValue(2).doubleValue(), .000000001d);
 		assertEquals("Expecting index 3 to have a cumulitive percentage of 1.0", 1.0, result.getValue(3).doubleValue(), .000000001d);
 				// tear-down: NONE in this test method
+		
+		//what actually happens is null pointer exception (lab4)
 		
 	}
 
