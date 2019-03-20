@@ -739,7 +739,7 @@ public class MyDataUtilitiesTest {
 		KeyedValues result = DataUtilities.getCumulativePercentages(values);
 		// verify
 		for(int i = 0 ; i < result.getItemCount(); i++){
-			int key = (int) result.getKey(i);
+			int key =  (Integer) result.getKey(i);
 			assertEquals("Expect each result value == expected value",expected.getValue(key).doubleValue(), result.getValue(key).doubleValue(), .000000001d);
 		}
 		// tear-down: NONE in this test method
