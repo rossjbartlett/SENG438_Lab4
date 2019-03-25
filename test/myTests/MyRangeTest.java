@@ -248,6 +248,14 @@ public class MyRangeTest {
 		Range expected = new Range(-1, 10);
 		assertEquals("The expansion of (0,10) by margins (0.1,0)", expected, r);
 	}
+	/*
+	 * This test added for lab4
+	 * Test type: Mutation 
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void test_expand_nullArg(){
+		Range r = Range.expand(null, 0.25, 0.5);
+	}
 
 	//tests for intersects()
 	/*
@@ -348,6 +356,14 @@ public class MyRangeTest {
 		boolean result = toTest.intersects(4, 8);
 		assertEquals("Testing intersects() where the provided range is whithin toTests range", true, result);
 		toTest = null;
+	}
+	//test added for lab 4 mutation 
+	@Test
+	public void test_Intersects_Invalid_Args()
+	{
+		Range toTest = new Range(0, 10);
+		boolean result = toTest.intersects(20, 15);
+		assertEquals("Testing intersects() where the arguments lower bound >  upper bound (invalid arg)", false, result);
 	}
 
 	
@@ -585,10 +601,20 @@ public class MyRangeTest {
 		double expected = 0.0;
 		assertEquals("The contrain of 3 within (0,10)", expected, r, 0.01d);
 	}
+	/*
+	 * This test added for lab4
+	 * Test type: Mutation 
+	 */
+	@Test
+	public void test_expandToInclude_nullArgument(){
+		Range r = Range.expandToInclude(null, 5);
+		Range expected = new Range(5,5);
+		assertEquals("expand To Include with Null argument should return new range(val,val)", expected, r);
+	
+	}
 	
 	//tests for getCentralValue(), added for lab3
-	/*
-	 * This test added for lab3
+	/* This test added for lab3
 	 * Test type: White Box
 	 * Strategy followed: Examined the implementation and developed a test cases for missing branches to increase coverage
 	 */
