@@ -183,14 +183,12 @@ public abstract class DataUtilities {
                 total = total + v.doubleValue();
             }
         }
-        System.out.println("total: "+total);
         double runningTotal = 0.0;
         for (int i = 0; i < data.getItemCount(); i++) {
             Number v = data.getValue(i);
             if (v != null) {
                 runningTotal = runningTotal + v.doubleValue();
             }
-
             result.addValue(data.getKey(i), new Double(runningTotal / total));
         }
         return result;
