@@ -636,17 +636,44 @@ public class MyRangeTest {
 		Range r = new Range(10, 5);
 	}
 	
-	//tests for hashCode(), added for lab3
+	//tests for hashCode(), added for lab3 and lab4
 	/*
 	 * This test added for lab3
 	 * Test type: White Box
 	 * Strategy followed: Examined the implementation and developed a test cases for missing branches to increase coverage
 	 */
 	@Test
-	public void test_hashCode(){
+	public void test_hashCode_zeroLower_positiveUpper(){
 		int r = exampleRange5.hashCode(); //exampleRange5 is (0,10)
 		int expected = 1076101120;
-		assertEquals("The hashCode of (0,10)", expected, r);	}
+		assertEquals("The hashCode of (0,10)", expected, r);	
+	}
+	
+	/*
+	 * This test added for lab4
+	 * Test type: Mutation 
+	 */
+	@Test
+	public void test_hashCode_negativeLower_positiveUpper(){
+		int r = exampleRange.hashCode(); //exampleRange5 is (0,10)
+		System.out.println(r);
+		int expected = -31457280;
+		assertEquals("The hashCode of (0,10)", expected, r);	
+	}
+	
+	
+	
+	//test for toString(), added for lab3
+	/*
+	 * This test added for lab4
+	 * Test type: Mutation 
+	 */
+	@Test
+	public void test_toString() {
+		String expected = "Range[0.0,10.0]";
+		assertTrue("The toString of (5, 10)", exampleRange5.toString().equals(expected));
+	}
+	
 
 
 	@After
