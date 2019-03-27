@@ -913,6 +913,71 @@
       ],
       "value": "Products (25)"
     }]
+  }, {
+    "id": "f7b1a360-39d9-409c-b6b4-c6b4a793d535",
+    "name": "Delete_All_From_Cart",
+    "commands": [{
+      "id": "ab5d9bad-2574-47ed-afa3-655d7843353a",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e90db79-c66b-4d87-b9b4-411a458e71b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#cart > #imgIKEALogoHeader",
+      "targets": [
+        ["css=#cart > #imgIKEALogoHeader", "css:finder"],
+        ["xpath=//img[contains(@src,'https://ww8.ikea.com/ext/iplugins/en_CA/development/plugins/navigation/images/cart-icon.png')]", "xpath:img"],
+        ["xpath=(//img[@id='imgIKEALogoHeader'])[2]", "xpath:attributes"],
+        ["xpath=//a[@id='cart']/img", "xpath:idRelative"],
+        ["xpath=//div[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4dfe0a7c-918d-4dc0-94ce-f0d96723a0e0",
+      "comment": "",
+      "command": "click",
+      "target": "id=link_remove_all_shopping_cart",
+      "targets": [
+        ["id=link_remove_all_shopping_cart", "id"],
+        ["linkText=Delete all", "linkText"],
+        ["css=#link_remove_all_shopping_cart", "css:finder"],
+        ["xpath=//a[contains(text(),'Delete all')]", "xpath:link"],
+        ["xpath=//a[@id='link_remove_all_shopping_cart']", "xpath:attributes"],
+        ["xpath=//div[@id='productSection']/div[2]/a", "xpath:idRelative"],
+        ["xpath=//form[2]/div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Delete all')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "798e8a3b-d02c-421b-9009-64cadb709d08",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jsButton_removeAll > input",
+      "targets": [
+        ["css=#jsButton_removeAll > input", "css:finder"],
+        ["xpath=//input[@value='Yes']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_removeAll']/input", "xpath:idRelative"],
+        ["xpath=//a[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6702b0de-d500-498d-aa05-c1fa8e0a1109",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=noOfCartItemsNew",
+      "targets": [
+        ["id=noOfCartItemsNew", "id"],
+        ["css=#noOfCartItemsNew", "css:finder"],
+        ["xpath=//span[@id='noOfCartItemsNew']", "xpath:attributes"],
+        ["xpath=//a[@id='cart']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/a/span", "xpath:position"]
+      ],
+      "value": "0"
+    }]
   }],
   "suites": [{
     "id": "e2701b7d-93b0-490d-b88b-2fa5adaa6b0a",
