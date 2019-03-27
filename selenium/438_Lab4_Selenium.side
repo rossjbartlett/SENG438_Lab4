@@ -273,37 +273,22 @@
       ],
       "value": ""
     }, {
-      "id": "ed7df7b2-b70f-4a29-a3a8-d76712111b6d",
+      "id": "8fb37ff5-2213-4150-9af3-c0d637d22c9f",
       "comment": "",
-      "command": "mouseOver",
-      "target": "linkText=IDEAS & INSPIRATION",
+      "command": "assertText",
+      "target": "id=loginLink",
       "targets": [
-        ["linkText=IDEAS & INSPIRATION", "linkText"],
-        ["css=#navInspire > .menu-link", "css:finder"],
-        ["xpath=//a[contains(text(),'IDEAS & INSPIRATION')]", "xpath:link"],
-        ["xpath=(//a[@name=''])[15]", "xpath:attributes"],
-        ["xpath=//li[@id='navInspire']/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/great_offers/ikea_ideas_and_inspiration.html?icid=itl|ca|en_ideas_navroom|201711131627257657_5')]", "xpath:href"],
-        ["xpath=//div[2]/ul/li[4]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'IDEAS & INSPIRATION')]", "xpath:innerText"]
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
       ],
-      "value": ""
-    }, {
-      "id": "8bbdea71-ab71-40f0-a78d-642abafd4230",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "linkText=IDEAS & INSPIRATION",
-      "targets": [
-        ["linkText=IDEAS & INSPIRATION", "linkText"],
-        ["css=#navInspire > .menu-link", "css:finder"],
-        ["xpath=//a[contains(text(),'IDEAS & INSPIRATION')]", "xpath:link"],
-        ["xpath=(//a[@name=''])[53]", "xpath:attributes"],
-        ["xpath=//li[@id='navInspire']/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/great_offers/ikea_ideas_and_inspiration.html?icid=itl|ca|en_ideas_navroom|201711131627257657_5')]", "xpath:href"],
-        ["xpath=//div[2]/ul/li[4]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'IDEAS & INSPIRATION')]", "xpath:innerText"]
-      ],
-      "value": ""
+      "value": "Login"
     }, {
       "id": "45fbc702-ce78-48c2-b457-341860081915",
       "comment": "",
@@ -396,6 +381,23 @@
       "target": "https://www.ikea.com/ca/en/",
       "targets": [],
       "value": ""
+    }, {
+      "id": "5367b6ce-d5bd-4b88-8d8b-39b9ed1c2ffe",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Login"
     }, {
       "id": "7d9bfbfb-6af3-405c-bcb2-92718ef1c78a",
       "comment": "",
