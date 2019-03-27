@@ -14,6 +14,23 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "fd52f203-9232-4765-89e0-3d011231aa04",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Login"
+    }, {
       "id": "72d8c571-7c59-4f2a-b06b-4215e53c280b",
       "comment": "",
       "command": "click",
@@ -109,6 +126,23 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "a3c1f09a-66f8-4d63-b383-ed4bdb3ba95b",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Login"
+    }, {
       "id": "b336c601-ea9e-4d24-a9c3-2d72cf3f6e25",
       "comment": "",
       "command": "click",
@@ -194,7 +228,7 @@
       ],
       "value": ""
     }, {
-      "id": "a3c1f09a-66f8-4d63-b383-ed4bdb3ba95b",
+      "id": "d11a5a0a-59ec-4e6a-bca0-d0407eacbe9c",
       "comment": "",
       "command": "assertText",
       "target": "id=loginLink",
@@ -992,7 +1026,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["c501d796-2e65-4dd4-8222-9a9d1e667c14", "2b015ae3-f3d2-4492-b49c-641c34bd402c"]
+    "tests": ["c501d796-2e65-4dd4-8222-9a9d1e667c14", "2b015ae3-f3d2-4492-b49c-641c34bd402c", "f7b1a360-39d9-409c-b6b4-c6b4a793d535"]
   }, {
     "id": "30e0c25c-b3cc-45c9-a42c-7261463756dd",
     "name": "Search Suite",
