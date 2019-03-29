@@ -1262,6 +1262,193 @@
       ],
       "value": "DELIVERY SERVICE"
     }]
+  }, {
+    "id": "e5656125-8ca5-43f2-9f75-21812c51a6c9",
+    "name": "find_collection_point",
+    "commands": [{
+      "id": "7ee8b5ae-cb2b-49c3-8249-64fe05b7d973",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d8fea48-7680-496d-bbe3-82fdade03fc0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Find a location",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7380b22-6896-4765-bce3-1c51feae91bc",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "IKEA Canada - Find a location near you - IKEA",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d694d6fb-cec7-4de4-8ab5-30b2f4388515",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#collection_point .dropbtn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5096dda-d431-4dbd-914a-c55bf584b593",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Bathurst, NB",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f037732-aa69-47c7-9f32-2d7a0a22cfa4",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Bathurst Collection Point - IKEA",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d3c6f06-18b6-49da-9f1d-f02f368a7647",
+      "comment": "Actual value on the website has &nbsp which is creating a white space that selenium can't see.",
+      "command": "verifyText",
+      "target": "css=p:nth-child(5)",
+      "targets": [],
+      "value": "Bathurst, NB E2A 4W7 "
+    }, {
+      "id": "7138b80e-6bf1-43b8-89ba-5a498d46093a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(4)",
+      "targets": [],
+      "value": "1930 Hall Court"
+    }]
+  }, {
+    "id": "8095b23e-0f3f-45ec-a9dd-c398cb1d297a",
+    "name": "find_pickup_point",
+    "commands": [{
+      "id": "1e1dfec8-b711-4208-a78e-1fbd04ccd20d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2e0c0a3-1b38-49f4-aa2b-fbab0f1b42ed",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Find a location",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "295d8680-f9ac-4e70-a9b4-5dab833b67ee",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "IKEA Canada - Find a location near you - IKEA",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae760d9c-86f8-4cff-8169-9099855a81b4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#pickup_point .dropbtn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb1b7402-fc89-4e43-a766-5a93fa1a8fe0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Kitchener, ON",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "728d98b3-8f05-4845-ab94-d5ba606db428",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Kitchener Pick-up and order point - IKEA",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cb1dd8ec-ced3-4022-b9e3-2d93ac888150",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.store-info > div > p:nth-child(3)",
+      "targets": [],
+      "value": "130 Gateway Park Dr"
+    }, {
+      "id": "7554efcc-bc7f-48b3-90a3-555ba0556477",
+      "comment": "Actual value on the website has &nbsp which is creating a white space that selenium can't see.",
+      "command": "verifyText",
+      "target": "css=.store-info > div > p:nth-child(4)",
+      "targets": [],
+      "value": "Kitchener ON, N2P 2J4 "
+    }]
+  }, {
+    "id": "da0502cb-eda8-4f77-8bb1-e2da1f3576d3",
+    "name": "find_store_location",
+    "commands": [{
+      "id": "94cffddd-8eb0-44e7-92bc-b8f5a59ee138",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4768e712-00b7-4d1e-9cea-c46610e9c8eb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Find a location",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74eb0b24-2646-48fd-bfd7-661b01f6ba76",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "IKEA Canada - Find a location near you - IKEA",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "406226f7-659f-4e0e-a2f3-5e817726fe9c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#stores .dropbtn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "957f339d-f952-4ed5-a035-0f1a78cc8f29",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#stores .dropbtn",
+      "targets": [],
+      "value": "IKEA Stores"
+    }, {
+      "id": "76cb1964-9598-426d-8ada-cebb8a6dda48",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Calgary, AB",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e1a4e08-1413-49a1-8256-6ec54807a960",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.general-box span:nth-child(5)",
+      "targets": [],
+      "value": "Calgary, Alberta"
+    }, {
+      "id": "c3b75e8e-e331-4a61-8f10-fd5d68a44e14",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.general-box > p:nth-child(2) > span:nth-child(3)",
+      "targets": [],
+      "value": "8000 11 St. S.E.,"
+    }, {
+      "id": "3ff96d0a-7c06-4290-9320-38d1571c7768",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "IKEA Calgary Store – Furniture & Home Furnishings - IKEA",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "e2701b7d-93b0-490d-b88b-2fa5adaa6b0a",
@@ -1291,6 +1478,13 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["6a88ad94-99e5-488e-9255-5af2370b0be6", "7867cb69-2ef4-4ab4-9212-48f90e45f4fc", "340557e3-d31d-4de8-8c49-44f58dfd0a29"]
+  }, {
+    "id": "de446a46-9df3-44c6-9cf3-d1b3a15331fc",
+    "name": "Find Location",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
   }],
   "urls": ["http://ikea.ca/", "https://www.ikea.com/ca/en/catalog/products/20391658/", "https://www.ikea.com/ca/en/", "https://www.ikea.com/ms/en_CA/customer-service/about-services/getting-it-home/index_delivery_pick-up.html"],
   "plugins": []
