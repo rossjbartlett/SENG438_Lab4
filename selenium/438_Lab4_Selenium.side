@@ -2,118 +2,107 @@
   "id": "06a4c442-ece4-4822-a2cf-2fdeb72adc40",
   "version": "2.0",
   "name": "438_Lab4_Selenium",
-  "url": "https://www.ikea.com/",
+  "url": "https://www.ikea.com/ca/en/",
   "tests": [{
     "id": "662873f7-7603-4137-bf1b-7b8e4ded853a",
     "name": "Login_Fail",
     "commands": [{
-      "id": "a70a27d9-b2b0-42d6-b9d9-02e1b971f374",
+      "id": "42db2436-4ccf-449c-88d3-946bc35c8355",
       "comment": "",
       "command": "open",
-      "target": "https://www.ikea.com/ca/en/",
+      "target": "https://www.ikea.com/",
       "targets": [],
       "value": ""
     }, {
-      "id": "fd52f203-9232-4765-89e0-3d011231aa04",
+      "id": "ae0ee8cb-2eb8-4687-b339-ce7fbc135cab",
       "comment": "",
-      "command": "assertText",
-      "target": "id=loginLink",
-      "targets": [
-        ["id=loginLink", "id"],
-        ["linkText=Logout", "linkText"],
-        ["css=#loginLink", "css:finder"],
-        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
-        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
-        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
-        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
-      ],
-      "value": "Login"
+      "command": "setWindowSize",
+      "target": "1280x690",
+      "targets": [],
+      "value": ""
     }, {
-      "id": "72d8c571-7c59-4f2a-b06b-4215e53c280b",
+      "id": "24f89594-646a-48e3-ab89-fcf7d3a1f2d1",
       "comment": "",
       "command": "click",
-      "target": "id=loginLink",
+      "target": "linkText=Take me to IKEA Canada (English)",
       "targets": [
-        ["id=loginLink", "id"],
-        ["linkText=Login", "linkText"],
-        ["css=#loginLink", "css:finder"],
-        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
-        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
-        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, 'https://secure.ikea.com/webapp/wcs/stores/servlet/LogonForm?storeId=3&langId=-15&catalogId=11001&_ga=2.132797326.1259249723.1553546382-654280169.1553546379')]", "xpath:href"],
-        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+        ["linkText=Take me to IKEA Canada (English)", "linkText"],
+        ["css=.gateway-header__cta:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Take me to IKEA Canada (English)')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Take me to IKEA Canada (English)')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "4ce89d31-ecc5-4195-8a3e-e3e0d7f73088",
+      "id": "3477ae16-6e22-490f-bdf7-d88834116283",
       "comment": "",
-      "command": "click",
-      "target": "id=login_logonId",
+      "command": "mouseOver",
+      "target": "linkText=IKEA Canada introduces new, sustainable salmon balls to Restaurant locations nationwide",
       "targets": [
-        ["id=login_logonId", "id"],
-        ["name=logonId", "name"],
-        ["css=#login_logonId", "css:finder"],
-        ["xpath=//input[@id='login_logonId']", "xpath:attributes"],
-        ["xpath=//form[@id='login']/div[2]/div[2]/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+        ["linkText=IKEA Canada introduces new, sustainable salmon balls to Restaurant locations nationwide", "linkText"],
+        ["css=.link:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'IKEA Canada introduces new, sustainable salmon balls to Restaurant locations nationwide')]", "xpath:link"],
+        ["xpath=//div[@id='newslist']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/about_ikea/newsitem/2019march_salmon_balls')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'IKEA Canada introduces new, sustainable salmon balls to Restaurant locations nationwide')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "853bbc0c-3fd7-4728-a993-5bd40d2b1aac",
+      "id": "ea8a14dc-4a5a-46e4-a325-4ede26c3f750",
       "comment": "",
-      "command": "type",
-      "target": "id=login_logonId",
+      "command": "mouseOut",
+      "target": "linkText=IKEA Canada introduces new, sustainable salmon balls to Restaurant locations nationwide",
       "targets": [
-        ["id=login_logonId", "id"],
-        ["name=logonId", "name"],
-        ["css=#login_logonId", "css:finder"],
-        ["xpath=//input[@id='login_logonId']", "xpath:attributes"],
-        ["xpath=//form[@id='login']/div[2]/div[2]/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div[2]/input", "xpath:position"]
-      ],
-      "value": "testUser@gmail.com"
-    }, {
-      "id": "dd6cb2a4-63a6-41ba-a9c8-314c6e53c9e8",
-      "comment": "",
-      "command": "type",
-      "target": "id=login_logonPassword",
-      "targets": [
-        ["id=login_logonPassword", "id"],
-        ["name=logonPassword", "name"],
-        ["css=#login_logonPassword", "css:finder"],
-        ["xpath=//input[@id='login_logonPassword']", "xpath:attributes"],
-        ["xpath=//form[@id='login']/div[3]/div[2]/input", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/input", "xpath:position"]
-      ],
-      "value": "testPass"
-    }, {
-      "id": "983b1751-e7cb-49c3-bd72-23529688765c",
-      "comment": "",
-      "command": "click",
-      "target": "css=.buttonWrapper:nth-child(9) > .orangeBtn",
-      "targets": [
-        ["css=.buttonWrapper:nth-child(9) > .orangeBtn", "css:finder"],
-        ["xpath=//input[@value='Log in']", "xpath:attributes"],
-        ["xpath=//form[@id='login']/div[6]/input", "xpath:idRelative"],
-        ["xpath=//div[6]/input", "xpath:position"]
+        ["linkText=IKEA Canada introduces new, sustainable salmon balls to Restaurant locations nationwide", "linkText"],
+        ["css=.link:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'IKEA Canada introduces new, sustainable salmon balls to Restaurant locations nationwide')]", "xpath:link"],
+        ["xpath=//div[@id='newslist']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/about_ikea/newsitem/2019march_salmon_balls')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'IKEA Canada introduces new, sustainable salmon balls to Restaurant locations nationwide')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "b1ec0046-631d-4943-bda4-26aa26333c0f",
+      "id": "c98b0d60-77df-4e43-8e6c-5306f8a03e98",
       "comment": "",
-      "command": "assertText",
-      "target": "id=loginFormErrorsServer",
+      "command": "mouseOver",
+      "target": "linkText=Find a location",
       "targets": [
-        ["id=loginFormErrorsServer", "id"],
-        ["css=#loginFormErrorsServer", "css:finder"],
-        ["xpath=//div[@id='loginFormErrorsServer']", "xpath:attributes"],
-        ["xpath=//form[@id='login']/div", "xpath:idRelative"],
-        ["xpath=//td/div/form/div", "xpath:position"]
+        ["linkText=Find a location", "linkText"],
+        ["css=#lstNavLeft > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Find a location')]", "xpath:link"],
+        ["xpath=(//a[@name=''])[8]", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/locator/ikny_splash_index.html?itm_campaign=findalocation_desktop_en&itm_element=header_desktop&itm_content=findalocation')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Find a location')]", "xpath:innerText"]
       ],
-      "value": "Login error - Invalid username/password"
+      "value": ""
+    }, {
+      "id": "eeb39d18-3bb0-4225-956d-1d89446c129f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Find a location",
+      "targets": [
+        ["linkText=Find a location", "linkText"],
+        ["css=#lstNavLeft > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Find a location')]", "xpath:link"],
+        ["xpath=(//a[@name=''])[8]", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/locator/ikny_splash_index.html?itm_campaign=findalocation_desktop_en&itm_element=header_desktop&itm_content=findalocation')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Find a location')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa143109-804e-461c-99f5-5347658279c5",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Furniture and Home Furnishings - IKEA",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "bba65750-faa7-4057-b002-2bee5b5f4089",
@@ -1457,17 +1446,1936 @@
       "value": ""
     }]
   }, {
-    "id": "39cb3901-d5ff-4a76-a1eb-f493d84266d3",
-    "name": "Add_To_List",
-    "commands": []
+    "id": "b549c65f-d77b-46cc-b082-0ece548a8c22",
+    "name": "Create_List_with_valid_name",
+    "commands": [{
+      "id": "5cc73203-f531-47aa-80b8-ef03c5a1655b",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay?storeId=3&langId=-15",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97e9f01a-6dfb-4370-b560-1dbd1d04039d",
+      "comment": "assert \"logged in\"",
+      "command": "assertText",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Logout"
+    }, {
+      "id": "4c9ec7b7-ae86-469b-8248-7f897d44173d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jsButton_ShoppingList_11 input",
+      "targets": [
+        ["css=#jsButton_ShoppingList_11 input", "css:finder"],
+        ["xpath=//input[@value='Create']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_ShoppingList_11']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d7f5d3f-8d70-4768-842c-66cdd3998b1f",
+      "comment": "",
+      "command": "click",
+      "target": "id=listName",
+      "targets": [
+        ["id=listName", "id"],
+        ["name=listName", "name"],
+        ["css=#listName", "css:finder"],
+        ["xpath=//input[@id='listName']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListPopup']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73ba3564-4b6f-44ca-b636-4eb6107597cc",
+      "comment": "",
+      "command": "type",
+      "target": "id=listName",
+      "targets": [
+        ["id=listName", "id"],
+        ["name=listName", "name"],
+        ["css=#listName", "css:finder"],
+        ["xpath=//input[@id='listName']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListPopup']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "My_Shopping_List"
+    }, {
+      "id": "ae1e6d0b-ff17-4e0a-b205-1b95e7d77b3f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jsButton_shopListPopup input",
+      "targets": [
+        ["css=#jsButton_shopListPopup input", "css:finder"],
+        ["xpath=(//input[@value='Create'])[2]", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_shopListPopup']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1efb8372-b888-4845-ae0b-86c68e39066e",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=My_Shopping_List(0)",
+      "targets": [
+        ["linkText=My_Shopping_List(0)", "linkText"],
+        ["css=.navItem > a", "css:finder"],
+        ["xpath=//div[@id='shoppingList']/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/InterestItemDisplay?langId=-15&storeId=3&listId=352781078')]", "xpath:href"],
+        ["xpath=//div[2]/div/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My_Shopping_List(0)')]", "xpath:innerText"]
+      ],
+      "value": "My_Shopping_List(0)"
+    }]
   }, {
-    "id": "cd5df8dc-b85d-4dbc-81df-0ba0c5c58255",
-    "name": "Delete_From_List",
-    "commands": []
+    "id": "3885948a-16f6-4aab-9ece-3de6ee9d16d0",
+    "name": "Delete List",
+    "commands": [{
+      "id": "a57137c8-74a8-4df4-80b2-331188d46540",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay?storeId=3&langId=-15",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1668b2b3-d31a-4a73-94e4-f6193a39be5a",
+      "comment": "assert \"logged in\"",
+      "command": "assertText",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Logout"
+    }, {
+      "id": "0d961429-ac62-4fdf-9009-a26b9d838d4e",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jsButton_ShoppingList_11 input",
+      "targets": [
+        ["css=#jsButton_ShoppingList_11 input", "css:finder"],
+        ["xpath=//input[@value='Create']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_ShoppingList_11']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f05cda5-6274-41e4-b027-23fc0786e8d0",
+      "comment": "",
+      "command": "click",
+      "target": "id=listName",
+      "targets": [
+        ["id=listName", "id"],
+        ["name=listName", "name"],
+        ["css=#listName", "css:finder"],
+        ["xpath=//input[@id='listName']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListPopup']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f384e71c-54b7-4d1b-a25a-a7c6cc1bbbfe",
+      "comment": "",
+      "command": "type",
+      "target": "id=listName",
+      "targets": [
+        ["id=listName", "id"],
+        ["name=listName", "name"],
+        ["css=#listName", "css:finder"],
+        ["xpath=//input[@id='listName']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListPopup']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "My_Shopping_List"
+    }, {
+      "id": "f0334e4f-b979-4cdf-b765-1e5c07b58f62",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jsButton_shopListPopup input",
+      "targets": [
+        ["css=#jsButton_shopListPopup input", "css:finder"],
+        ["xpath=(//input[@value='Create'])[2]", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_shopListPopup']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ab976f4-6cfa-47d3-a5b8-b727d694a624",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=My_Shopping_List(0)",
+      "targets": [
+        ["linkText=My_Shopping_List(0)", "linkText"],
+        ["css=.navItem > a", "css:finder"],
+        ["xpath=//div[@id='shoppingList']/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/InterestItemDisplay?langId=-15&storeId=3&listId=352781078')]", "xpath:href"],
+        ["xpath=//div[2]/div/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My_Shopping_List(0)')]", "xpath:innerText"]
+      ],
+      "value": "My_Shopping_List(0)"
+    }, {
+      "id": "30e2026c-d2f7-4ce2-b3cb-5ed47e6d7778",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnDeleteList",
+      "targets": [
+        ["id=btnDeleteList", "id"],
+        ["linkText=Delete", "linkText"],
+        ["css=#btnDeleteList", "css:finder"],
+        ["xpath=//a[contains(text(),'Delete')]", "xpath:link"],
+        ["xpath=//a[@id='btnDeleteList']", "xpath:attributes"],
+        ["xpath=//div[@id='btnContainerTop']/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'IrwShoppingListNoJS?langId=-15&storeId=3&commandId=delete&listId=353057562')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af185cdc-b253-4825-bd8a-2b4c60b86103",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@id='jsButton_shopListPopup']/div[2]/input",
+      "targets": [
+        ["css=#jsButton_shopListPopup input", "css:finder"],
+        ["xpath=//input[@value='Delete']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_shopListPopup']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11b727af-bc08-4c34-9a55-d5c56da73b98",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[@id='errMsg.confirm']",
+      "targets": [
+        ["id=errMsg.confirm", "id"],
+        ["css=#errMsg\\.confirm", "css:finder"],
+        ["xpath=//span[@id='errMsg.confirm']", "xpath:attributes"],
+        ["xpath=//div[@id='errMsg']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'The list \"My_Shopping_List\" has been deleted.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37bb14b2-e395-457a-ac7a-a14eb3e64cd7",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=errMsg.confirm",
+      "targets": [
+        ["id=errMsg.confirm", "id"],
+        ["css=#errMsg\\.confirm", "css:finder"],
+        ["xpath=//span[@id='errMsg.confirm']", "xpath:attributes"],
+        ["xpath=//div[@id='errMsg']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'The list \"My_Shopping_List\" has been deleted.')]", "xpath:innerText"]
+      ],
+      "value": "The list \"My_Shopping_List\" has been deleted."
+    }]
   }, {
-    "id": "8a928603-bf1b-481c-bebf-b8f28de73d60",
-    "name": "Delete_All_From_LIst",
-    "commands": []
+    "id": "737c2d2b-bbd1-4862-bd76-4f25433e59b7",
+    "name": "Create_List_with_invalid_name",
+    "commands": [{
+      "id": "9abd0cd0-7cd6-40f6-92a2-4b8409ac1ab1",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay?storeId=3&langId=-15",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eaf7c1f2-88a5-4450-9c07-b917080a937d",
+      "comment": "assert \"logged in\"",
+      "command": "assertText",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Logout"
+    }, {
+      "id": "f1e8a8fd-2952-41be-bd9b-3e68fa0c3752",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jsButton_ShoppingList_11 input",
+      "targets": [
+        ["css=#jsButton_ShoppingList_11 input", "css:finder"],
+        ["xpath=//input[@value='Create']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_ShoppingList_11']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27be49ad-a34c-445e-ac19-304c78ff1c86",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#jsButton_ShoppingList_11 input",
+      "targets": [
+        ["css=#jsButton_ShoppingList_11 input", "css:finder"],
+        ["xpath=//input[@value='Create']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_ShoppingList_11']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b41b036-ac89-411f-ad26-a631b5341e0e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#jsButton_ShoppingList_11 input",
+      "targets": [
+        ["css=#jsButton_ShoppingList_11 input", "css:finder"],
+        ["xpath=//input[@value='Create']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_ShoppingList_11']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b7fb5ab-6c06-442f-ab0a-50a07e7cd23c",
+      "comment": "",
+      "command": "click",
+      "target": "id=listName",
+      "targets": [
+        ["id=listName", "id"],
+        ["name=listName", "name"],
+        ["css=#listName", "css:finder"],
+        ["xpath=//input[@id='listName']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListPopup']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5febaa6-cbae-4452-9ce8-1d2485d67a43",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@value='Create'])[2]",
+      "targets": [
+        ["css=#jsButton_ShoppingList_11 input", "css:finder"],
+        ["xpath=//input[@value='Create']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_ShoppingList_11']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7939a792-3f22-4961-a1da-a59949176f52",
+      "comment": "",
+      "command": "click",
+      "target": "id=errMsg.error",
+      "targets": [
+        ["id=errMsg.error", "id"],
+        ["css=#errMsg\\.error", "css:finder"],
+        ["xpath=//span[@id='errMsg.error']", "xpath:attributes"],
+        ["xpath=//div[@id='errMsg']/span[2]", "xpath:idRelative"],
+        ["xpath=//div/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Error: 5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdff2063-966f-49c6-86a4-2fc8e5120ee7",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=errMsg.error",
+      "targets": [
+        ["id=errMsg.error", "id"],
+        ["css=#errMsg\\.error", "css:finder"],
+        ["xpath=//span[@id='errMsg.error']", "xpath:attributes"],
+        ["xpath=//div[@id='errMsg']/span[2]", "xpath:idRelative"],
+        ["xpath=//div/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Error: 5')]", "xpath:innerText"]
+      ],
+      "value": "Error: 5"
+    }]
+  }, {
+    "id": "13c3009e-566e-4df6-8ff8-6cb04316f47f",
+    "name": "Add_Valid_Product",
+    "commands": [{
+      "id": "2d01d778-5b30-4950-a0e1-8c1cbd1c92c8",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay?storeId=3&langId=-15",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b0279ce-9a5e-44b7-94cb-3bff8b19d260",
+      "comment": "assert test product not present",
+      "command": "assertElementNotPresent",
+      "target": "css=#tr_70299285 .prodName",
+      "targets": [
+        ["css=#tr_70299285 .prodName", "css:finder"],
+        ["xpath=//tr[@id='tr_70299285']/td/div/a/span", "xpath:idRelative"],
+        ["xpath=//td/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'TUFFING')]", "xpath:innerText"]
+      ],
+      "value": "TUFFING"
+    }, {
+      "id": "e66823f8-59aa-4612-8b6a-545301c667cf",
+      "comment": "",
+      "command": "type",
+      "target": "id=partNumber",
+      "targets": [
+        ["id=partNumber", "id"],
+        ["name=partNumber", "name"],
+        ["css=#partNumber", "css:finder"],
+        ["xpath=//input[@id='partNumber']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "702.992.85"
+    }, {
+      "id": "50b97adf-dcf5-48fa-bf7e-9b53e222cfaa",
+      "comment": "",
+      "command": "click",
+      "target": "id=formShoppingListLeftNav",
+      "targets": [
+        ["id=formShoppingListLeftNav", "id"],
+        ["name=formShoppingListLeftNav", "name"],
+        ["css=#formShoppingListLeftNav", "css:finder"],
+        ["xpath=//form[@id='formShoppingListLeftNav']", "xpath:attributes"],
+        ["xpath=//div[@id='shoppingList']/div/div[5]/div/form", "xpath:idRelative"],
+        ["xpath=//div[5]/div/form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9ba7d41-5110-43f8-915b-c624992908d2",
+      "comment": "",
+      "command": "type",
+      "target": "id=quantity",
+      "targets": [
+        ["id=quantity", "id"],
+        ["name=quantity", "name"],
+        ["css=#quantity", "css:finder"],
+        ["xpath=//input[@id='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input[2]", "xpath:idRelative"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "ad1b80c6-f394-4562-8fac-82a4c3dcab7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jsButton_ShoppingList_01 input",
+      "targets": [
+        ["css=#jsButton_ShoppingList_01 input", "css:finder"],
+        ["xpath=//input[@value='Add product']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_ShoppingList_01']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10210eda-0cbd-4883-9574-6bfb7de5b3e6",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//td/div/a/span",
+      "targets": [
+        ["css=.prodName", "css:finder"],
+        ["xpath=//tr[@id='tr_70299285']/td/div/a/span", "xpath:idRelative"],
+        ["xpath=//td/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'TUFFING')]", "xpath:innerText"]
+      ],
+      "value": "TUFFING"
+    }, {
+      "id": "798cf11c-d087-4121-9935-10bbebf6c26b",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//td/div/a/span[2]",
+      "targets": [
+        ["css=.prodDesc", "css:finder"],
+        ["xpath=//tr[@id='tr_70299285']/td/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//td/div/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Bunk bed frame')]", "xpath:innerText"]
+      ],
+      "value": "Bunk bed frame"
+    }, {
+      "id": "abfbd51b-8d3d-41c7-93f6-616de8db9402",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=price_70299285",
+      "targets": [
+        ["id=price_70299285", "id"],
+        ["css=#price_70299285", "css:finder"],
+        ["xpath=//span[@id='price_70299285']", "xpath:attributes"],
+        ["xpath=//tr[@id='tr_70299285']/td/div/span", "xpath:idRelative"],
+        ["xpath=//td/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'$189.00')]", "xpath:innerText"]
+      ],
+      "value": "$189.00"
+    }, {
+      "id": "ef00455e-fbd1-45ba-88cf-aea19fe3b163",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "id=quantity_929686",
+      "targets": [
+        ["id=quantity_929686", "id"],
+        ["name=quantity_929686", "name"],
+        ["css=#quantity_929686", "css:finder"],
+        ["xpath=//input[@id='quantity_929686']", "xpath:attributes"],
+        ["xpath=//tr[@id='tr_70299285']/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//td[2]/div/input", "xpath:position"]
+      ],
+      "value": "5"
+    }]
+  }, {
+    "id": "962e3dbe-0a0a-425a-8cd9-f00f838353e2",
+    "name": "Add_invalid_quantity",
+    "commands": [{
+      "id": "84d021de-f716-4a6d-910e-e09ecdd1efed",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay?storeId=3&langId=-15",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3393f9d3-da2b-4009-b2b3-e55773762d88",
+      "comment": "assert test product not present",
+      "command": "assertElementNotPresent",
+      "target": "css=#tr_70299285 .prodName",
+      "targets": [
+        ["css=#tr_70299285 .prodName", "css:finder"],
+        ["xpath=//tr[@id='tr_70299285']/td/div/a/span", "xpath:idRelative"],
+        ["xpath=//td/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'TUFFING')]", "xpath:innerText"]
+      ],
+      "value": "TUFFING"
+    }, {
+      "id": "7f62f2a3-01fe-421a-bd5e-c4c85e45e950",
+      "comment": "",
+      "command": "click",
+      "target": "id=partNumber",
+      "targets": [
+        ["id=partNumber", "id"],
+        ["name=partNumber", "name"],
+        ["css=#partNumber", "css:finder"],
+        ["xpath=//input[@id='partNumber']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c36c11d9-8785-4b07-986d-dfa1c84a3808",
+      "comment": "",
+      "command": "type",
+      "target": "id=partNumber",
+      "targets": [
+        ["id=partNumber", "id"],
+        ["name=partNumber", "name"],
+        ["css=#partNumber", "css:finder"],
+        ["xpath=//input[@id='partNumber']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "702.992.85"
+    }, {
+      "id": "5f8753cc-855f-43fc-a27f-5a551e34d1d0",
+      "comment": "",
+      "command": "click",
+      "target": "id=formShoppingListLeftNav",
+      "targets": [
+        ["id=formShoppingListLeftNav", "id"],
+        ["name=formShoppingListLeftNav", "name"],
+        ["css=#formShoppingListLeftNav", "css:finder"],
+        ["xpath=//form[@id='formShoppingListLeftNav']", "xpath:attributes"],
+        ["xpath=//div[@id='shoppingList']/div/div[5]/div/form", "xpath:idRelative"],
+        ["xpath=//div[5]/div/form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0545de3-8bad-440a-accd-2897d1349b84",
+      "comment": "",
+      "command": "type",
+      "target": "id=quantity",
+      "targets": [
+        ["id=quantity", "id"],
+        ["name=quantity", "name"],
+        ["css=#quantity", "css:finder"],
+        ["xpath=//input[@id='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input[2]", "xpath:idRelative"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": "-1"
+    }, {
+      "id": "c0019d7e-6b83-4553-9808-b8570fb1aafa",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jsButton_ShoppingList_01 input",
+      "targets": [
+        ["css=#jsButton_ShoppingList_01 input", "css:finder"],
+        ["xpath=//input[@value='Add product']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_ShoppingList_01']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e047a6d-4a11-4eff-be22-1647956a70f9",
+      "comment": "",
+      "command": "click",
+      "target": "id=errMsg.error",
+      "targets": [
+        ["id=errMsg.error", "id"],
+        ["css=#errMsg\\.error", "css:finder"],
+        ["xpath=//span[@id='errMsg.error']", "xpath:attributes"],
+        ["xpath=//div[@id='errMsg']/span[2]", "xpath:idRelative"],
+        ["xpath=//div/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Quantity must be a number between 1 and 1000')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "868d4920-6d8b-44b3-abca-d604399fdde8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=errMsg.error",
+      "targets": [
+        ["id=errMsg.error", "id"],
+        ["css=#errMsg\\.error", "css:finder"],
+        ["xpath=//span[@id='errMsg.error']", "xpath:attributes"],
+        ["xpath=//div[@id='errMsg']/span[2]", "xpath:idRelative"],
+        ["xpath=//div/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Quantity must be a number between 1 and 1000')]", "xpath:innerText"]
+      ],
+      "value": "Quantity must be a number between 1 and 1000"
+    }, {
+      "id": "2d46b2bb-01fd-43ed-be9c-64255d3bd2b5",
+      "comment": "assert test product not present",
+      "command": "assertElementNotPresent",
+      "target": "css=#tr_70299285 .prodName",
+      "targets": [
+        ["css=#tr_70299285 .prodName", "css:finder"],
+        ["xpath=//tr[@id='tr_70299285']/td/div/a/span", "xpath:idRelative"],
+        ["xpath=//td/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'TUFFING')]", "xpath:innerText"]
+      ],
+      "value": "TUFFING"
+    }]
+  }, {
+    "id": "82c4b5bf-24b9-465c-921e-d5a97572a660",
+    "name": "Add_Invalid_Product",
+    "commands": [{
+      "id": "db719f0b-c26b-47e3-91e1-077f7abdadac",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay?storeId=3&langId=-15",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "587d79bb-9d9f-459b-9a4f-6316bef0c5d6",
+      "comment": "",
+      "command": "click",
+      "target": "id=partNumber",
+      "targets": [
+        ["id=partNumber", "id"],
+        ["name=partNumber", "name"],
+        ["css=#partNumber", "css:finder"],
+        ["xpath=//input[@id='partNumber']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3e4619a-da37-4777-9b6b-9fb860171cbc",
+      "comment": "add invalid product named 'zzz'",
+      "command": "type",
+      "target": "id=partNumber",
+      "targets": [
+        ["id=partNumber", "id"],
+        ["name=partNumber", "name"],
+        ["css=#partNumber", "css:finder"],
+        ["xpath=//input[@id='partNumber']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "zzz"
+    }, {
+      "id": "007b4b6a-27f7-47dc-a66d-bb52d707f389",
+      "comment": "",
+      "command": "click",
+      "target": "id=formShoppingListLeftNav",
+      "targets": [
+        ["id=formShoppingListLeftNav", "id"],
+        ["name=formShoppingListLeftNav", "name"],
+        ["css=#formShoppingListLeftNav", "css:finder"],
+        ["xpath=//form[@id='formShoppingListLeftNav']", "xpath:attributes"],
+        ["xpath=//div[@id='shoppingList']/div/div[5]/div/form", "xpath:idRelative"],
+        ["xpath=//div[5]/div/form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36fa4851-0db4-4fa5-9d4e-8338fa68f42c",
+      "comment": "",
+      "command": "click",
+      "target": "id=quantity",
+      "targets": [
+        ["id=quantity", "id"],
+        ["name=quantity", "name"],
+        ["css=#quantity", "css:finder"],
+        ["xpath=//input[@id='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input[2]", "xpath:idRelative"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e476efe3-d6db-4509-b2e9-fe2de1a928f7",
+      "comment": "",
+      "command": "type",
+      "target": "id=quantity",
+      "targets": [
+        ["id=quantity", "id"],
+        ["name=quantity", "name"],
+        ["css=#quantity", "css:finder"],
+        ["xpath=//input[@id='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input[2]", "xpath:idRelative"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": "12"
+    }, {
+      "id": "3e0d021b-3f22-4ed3-9ee4-e7045be2f55c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@value='Add product']",
+      "targets": [
+        ["css=#jsButton_ShoppingList_01 input", "css:finder"],
+        ["xpath=//input[@value='Add product']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_ShoppingList_01']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0ede122-a3ae-4f49-a6c0-b1f3006f6326",
+      "comment": "",
+      "command": "click",
+      "target": "id=errMsg.error",
+      "targets": [
+        ["id=errMsg.error", "id"],
+        ["css=#errMsg\\.error", "css:finder"],
+        ["xpath=//span[@id='errMsg.error']", "xpath:attributes"],
+        ["xpath=//div[@id='errMsg']/span[2]", "xpath:idRelative"],
+        ["xpath=//div/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Invalid article number')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69502ea8-425d-495c-b23e-fe3b6b540881",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=errMsg.error",
+      "targets": [
+        ["id=errMsg.error", "id"],
+        ["css=#errMsg\\.error", "css:finder"],
+        ["xpath=//span[@id='errMsg.error']", "xpath:attributes"],
+        ["xpath=//div[@id='errMsg']/span[2]", "xpath:idRelative"],
+        ["xpath=//div/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Invalid article number')]", "xpath:innerText"]
+      ],
+      "value": "Invalid article number"
+    }, {
+      "id": "d518f8f7-b841-48cb-935f-91b275a4d0ca",
+      "comment": "assert list contains no product named 'zzz'",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//span[contains(.,'zzz')]",
+      "targets": [
+        ["css=.prodName", "css:finder"],
+        ["xpath=//tr[@id='tr_70299285']/td/div/a/span", "xpath:idRelative"],
+        ["xpath=//td/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'TUFFING')]", "xpath:innerText"]
+      ],
+      "value": "zzz"
+    }]
+  }, {
+    "id": "886fe126-03d8-473d-b1de-aa9778e8ffda",
+    "name": "Edit_First_Name_Invalid",
+    "commands": [{
+      "id": "d35e91ab-4368-47d2-b448-3f4a75463977",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure.ikea.com/webapp/wcs/stores/servlet/UpdateUser?layout=user/editProfile&formName=updatePrivatePersonal&actionType=view&langId=-15&storeId=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4025c43-46fa-446b-8a60-d62e35a1caa0",
+      "comment": "assert \"logged in\"",
+      "command": "assertText",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Logout"
+    }, {
+      "id": "3720de17-bd5a-4535-bb29-06c3ebe71c5b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ppFormContainer",
+      "targets": [
+        ["css=.ppFormContainer", "css:finder"],
+        ["xpath=//div[@id='ppContentContainer']/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec8dcc8f-7b49-45ef-8873-3d2a3c987010",
+      "comment": "",
+      "command": "type",
+      "target": "id=updatePrivatePersonal_firstName",
+      "targets": [
+        ["id=updatePrivatePersonal_firstName", "id"],
+        ["name=firstName", "name"],
+        ["css=#updatePrivatePersonal_firstName", "css:finder"],
+        ["xpath=//input[@id='updatePrivatePersonal_firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7c12c7d-875d-4dbb-a663-d93b2fa9f426",
+      "comment": "",
+      "command": "click",
+      "target": "id=editPersonalInfoSubmit",
+      "targets": [
+        ["id=editPersonalInfoSubmit", "id"],
+        ["css=#editPersonalInfoSubmit", "css:finder"],
+        ["xpath=//input[@id='editPersonalInfoSubmit']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[5]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c61d787d-cc4b-4e1f-853a-73b40b8365c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ppContentBodyColor",
+      "targets": [
+        ["css=.ppContentBodyColor", "css:finder"],
+        ["xpath=//div[@id='ppContentContainer']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3c2f906-0f22-4402-b7dd-9f7f693bf4a1",
+      "comment": "assert that forced to stay on the same page",
+      "command": "assertTitle",
+      "target": "Edit Personal Information - IKEA",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a640af5-e25b-416d-bd62-611287fadd03",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=updatePrivatePersonal_firstName_required_FieldError",
+      "targets": [
+        ["id=updatePrivatePersonal_firstName_required_FieldError", "id"],
+        ["css=#updatePrivatePersonal_firstName_required_FieldError", "css:finder"],
+        ["xpath=//div[@id='updatePrivatePersonal_firstName_required_FieldError']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[2]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "Please enter your first name."
+    }]
+  }, {
+    "id": "455643b8-bdb9-471e-8000-233196e78d82",
+    "name": "Edit_Last_Name_Invalid",
+    "commands": [{
+      "id": "032533a5-55e6-44de-92cd-c16bcce77548",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure.ikea.com/webapp/wcs/stores/servlet/UpdateUser?layout=user/editProfile&formName=updatePrivatePersonal&actionType=view&langId=-15&storeId=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "89c9f1d4-202f-4a7b-90eb-b440dffe6136",
+      "comment": "assert \"logged in\"",
+      "command": "assertText",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Logout"
+    }, {
+      "id": "2cfa725e-3bcc-46fe-bdc9-dd313102be58",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ppFormContainer",
+      "targets": [
+        ["css=.ppFormContainer", "css:finder"],
+        ["xpath=//div[@id='ppContentContainer']/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f5a0ac9-e450-4039-8ac9-84a18f4d9e22",
+      "comment": "",
+      "command": "type",
+      "target": "id=updatePrivatePersonal_lastName",
+      "targets": [
+        ["id=updatePrivatePersonal_firstName", "id"],
+        ["name=firstName", "name"],
+        ["css=#updatePrivatePersonal_firstName", "css:finder"],
+        ["xpath=//input[@id='updatePrivatePersonal_firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1651d35-6a17-482c-a3db-12c72356e5d4",
+      "comment": "",
+      "command": "click",
+      "target": "id=editPersonalInfoSubmit",
+      "targets": [
+        ["id=editPersonalInfoSubmit", "id"],
+        ["css=#editPersonalInfoSubmit", "css:finder"],
+        ["xpath=//input[@id='editPersonalInfoSubmit']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[5]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2fb0a7b-3686-43b7-b03c-c4440a8b85c9",
+      "comment": "assert that forced to stay on the same page",
+      "command": "assertTitle",
+      "target": "Edit Personal Information - IKEA",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15f9efb6-543d-4128-bb89-4c9c58f63ecd",
+      "comment": "",
+      "command": "click",
+      "target": "id=updatePrivatePersonal_lastName_required_FieldError",
+      "targets": [
+        ["id=updatePrivatePersonal_lastName_required_FieldError", "id"],
+        ["css=#updatePrivatePersonal_lastName_required_FieldError", "css:finder"],
+        ["xpath=//div[@id='updatePrivatePersonal_lastName_required_FieldError']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[3]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//form/div[3]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a2c8ae1-4739-4cd7-b23f-ed82166c06b4",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=updatePrivatePersonal_lastName_required_FieldError",
+      "targets": [
+        ["id=updatePrivatePersonal_lastName_required_FieldError", "id"],
+        ["css=#updatePrivatePersonal_lastName_required_FieldError", "css:finder"],
+        ["xpath=//div[@id='updatePrivatePersonal_lastName_required_FieldError']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[3]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//form/div[3]/div[2]/div", "xpath:position"]
+      ],
+      "value": "Please enter your last name."
+    }]
+  }, {
+    "id": "f30c819e-045a-423d-b4af-9689a2383fe9",
+    "name": "Edit_Phone_Number_Invalid",
+    "commands": [{
+      "id": "eb1b84b8-c54b-4c18-abfc-2f3ca6b033c7",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure.ikea.com/webapp/wcs/stores/servlet/UpdateUser?layout=user/editProfile&formName=updatePrivatePersonal&actionType=view&langId=-15&storeId=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8318d634-6328-4847-8706-66fc5b2c17a5",
+      "comment": "assert \"logged in\"",
+      "command": "assertText",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Logout"
+    }, {
+      "id": "e76ca291-95fa-41de-adfa-c6b017ca66f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ppFormContainer",
+      "targets": [
+        ["css=.ppFormContainer", "css:finder"],
+        ["xpath=//div[@id='ppContentContainer']/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4bf972d-f111-4018-8126-ffca7c33074b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.formField:nth-child(16)",
+      "targets": [
+        ["css=.formField:nth-child(16)", "css:finder"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[4]", "xpath:idRelative"],
+        ["xpath=//form/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9785ae0c-b1c5-4b37-b6b5-68c75a80df68",
+      "comment": "",
+      "command": "type",
+      "target": "id=updatePrivatePersonal_phone2",
+      "targets": [
+        ["id=updatePrivatePersonal_phone2", "id"],
+        ["name=phone2", "name"],
+        ["css=#updatePrivatePersonal_phone2", "css:finder"],
+        ["xpath=//input[@id='updatePrivatePersonal_phone2']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "375889e1-f114-4c9d-ad63-14b354602b35",
+      "comment": "",
+      "command": "click",
+      "target": "id=editPersonalInfoSubmit",
+      "targets": [
+        ["id=editPersonalInfoSubmit", "id"],
+        ["css=#editPersonalInfoSubmit", "css:finder"],
+        ["xpath=//input[@id='editPersonalInfoSubmit']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[5]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ed49bd8-a7d5-42f6-bd2d-d643050b6234",
+      "comment": "assert that forced to stay on the same page",
+      "command": "assertTitle",
+      "target": "Edit Personal Information - IKEA",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e3c9769-6ed9-427c-ac8f-b8dfcb43cb3e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=updatePrivatePersonal_phone2_isTelephoneGlobal_FieldError",
+      "targets": [
+        ["id=updatePrivatePersonal_phone2_isTelephoneGlobal_FieldError", "id"],
+        ["css=#updatePrivatePersonal_phone2_isTelephoneGlobal_FieldError", "css:finder"],
+        ["xpath=//div[@id='updatePrivatePersonal_phone2_isTelephoneGlobal_FieldError']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[4]/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Phone number is not formatted correctly."
+    }]
+  }, {
+    "id": "fcdb39df-1a20-47ad-86da-a03908ec9aa3",
+    "name": "Edit_First_Name_Valid",
+    "commands": [{
+      "id": "8332866c-4aa6-4b37-96ff-24921a90762c",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure.ikea.com/webapp/wcs/stores/servlet/UpdateUser?layout=user/editProfile&formName=updatePrivatePersonal&actionType=view&langId=-15&storeId=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cacb547d-14e3-4765-b9d3-56cd05be05a9",
+      "comment": "assert \"logged in\"",
+      "command": "assertText",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Logout"
+    }, {
+      "id": "c097ded1-c896-4df9-bb4a-f1876c46c75a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ppFormContainer",
+      "targets": [
+        ["css=.ppFormContainer", "css:finder"],
+        ["xpath=//div[@id='ppContentContainer']/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "332125a0-e909-456a-a7c0-88859fe50b64",
+      "comment": "",
+      "command": "type",
+      "target": "id=updatePrivatePersonal_firstName",
+      "targets": [
+        ["id=updatePrivatePersonal_firstName", "id"],
+        ["name=firstName", "name"],
+        ["css=#updatePrivatePersonal_firstName", "css:finder"],
+        ["xpath=//input[@id='updatePrivatePersonal_firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "first"
+    }, {
+      "id": "e373c1dd-6acb-4d81-ae5c-e755d605591f",
+      "comment": "",
+      "command": "click",
+      "target": "id=editPersonalInfoSubmit",
+      "targets": [
+        ["id=editPersonalInfoSubmit", "id"],
+        ["css=#editPersonalInfoSubmit", "css:finder"],
+        ["xpath=//input[@id='editPersonalInfoSubmit']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[5]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a79618a3-4cda-4d1c-bd71-6368748067a3",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.messageBoxHeader",
+      "targets": [
+        ["css=.messageBoxHeader", "css:finder"],
+        ["xpath=//div[@id='ppMessageBox']/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Your information has been updated')]", "xpath:innerText"]
+      ],
+      "value": "Your information has been updated"
+    }, {
+      "id": "14186f40-a69b-4796-96db-5bd3067ece64",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.sectionList:nth-child(2) > li:nth-child(2)",
+      "targets": [
+        ["css=.sectionList:nth-child(2) > li:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='ppContentContainer']/div[3]/div[2]/div/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'First name: first')]", "xpath:innerText"]
+      ],
+      "value": "First name: first"
+    }]
+  }, {
+    "id": "2ee477a7-289f-424a-8cbc-c17baca09994",
+    "name": "Edit_Last_Name_Valid",
+    "commands": [{
+      "id": "1a43bbfd-ac4e-4717-bcd7-61eb8a36a543",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure.ikea.com/webapp/wcs/stores/servlet/UpdateUser?layout=user/editProfile&formName=updatePrivatePersonal&actionType=view&langId=-15&storeId=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9146cc2-0cbf-4d19-ba45-d245fafb740e",
+      "comment": "assert \"logged in\"",
+      "command": "assertText",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Logout"
+    }, {
+      "id": "e51ce9c4-8d0d-432a-9d3c-7b5be7bc8e4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ppFormContainer",
+      "targets": [
+        ["css=.ppFormContainer", "css:finder"],
+        ["xpath=//div[@id='ppContentContainer']/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c1951c2-3aa7-48a5-81aa-e2457d8c2781",
+      "comment": "",
+      "command": "type",
+      "target": "id=updatePrivatePersonal_lastName",
+      "targets": [
+        ["id=updatePrivatePersonal_firstName", "id"],
+        ["name=firstName", "name"],
+        ["css=#updatePrivatePersonal_firstName", "css:finder"],
+        ["xpath=//input[@id='updatePrivatePersonal_firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "last"
+    }, {
+      "id": "932e1688-0008-46e6-88bc-dce512e50cba",
+      "comment": "",
+      "command": "click",
+      "target": "id=editPersonalInfoSubmit",
+      "targets": [
+        ["id=editPersonalInfoSubmit", "id"],
+        ["css=#editPersonalInfoSubmit", "css:finder"],
+        ["xpath=//input[@id='editPersonalInfoSubmit']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[5]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e24e31c-add8-43d0-8076-54a461a543ab",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.messageBoxHeader",
+      "targets": [
+        ["css=.messageBoxHeader", "css:finder"],
+        ["xpath=//div[@id='ppMessageBox']/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Your information has been updated')]", "xpath:innerText"]
+      ],
+      "value": "Your information has been updated"
+    }, {
+      "id": "66c0ec4e-6251-40f6-a13c-b215ccebe6e4",
+      "comment": "assert updated",
+      "command": "assertText",
+      "target": "css=.sectionList:nth-child(2) > li:nth-child(3)",
+      "targets": [
+        ["css=.sectionList:nth-child(2) > li:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='ppContentContainer']/div[3]/div[2]/div/ul/li[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/ul/li[3]", "xpath:position"],
+        ["xpath=//li[contains(.,'Last name: last')]", "xpath:innerText"]
+      ],
+      "value": "Last name: last"
+    }]
+  }, {
+    "id": "7311ab78-7e9f-4eaa-868c-e3e55c9853d2",
+    "name": "Edit_Phone_Number_Valid",
+    "commands": [{
+      "id": "821861cf-0473-439c-9f65-f78d97553987",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure.ikea.com/webapp/wcs/stores/servlet/UpdateUser?layout=user/editProfile&formName=updatePrivatePersonal&actionType=view&langId=-15&storeId=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3010b90-295a-430f-bd2c-5317a0719ccc",
+      "comment": "assert \"logged in\"",
+      "command": "assertText",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//ul[@id='lstNavLeft']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/webapp/wcs/stores/servlet/Logoff?langId=-15&storeId=3&forgetMe=true')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Logout"
+    }, {
+      "id": "07c70904-1a09-4b0c-a921-3ad33884e550",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ppFormContainer",
+      "targets": [
+        ["css=.ppFormContainer", "css:finder"],
+        ["xpath=//div[@id='ppContentContainer']/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44e76de1-d72f-4c3c-9ecb-6258b76479fe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.formField:nth-child(16)",
+      "targets": [
+        ["css=.formField:nth-child(16)", "css:finder"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[4]", "xpath:idRelative"],
+        ["xpath=//form/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47d5fa56-b56b-4919-ba73-d9f4f66d7118",
+      "comment": "",
+      "command": "type",
+      "target": "id=updatePrivatePersonal_phone2",
+      "targets": [
+        ["id=updatePrivatePersonal_phone2", "id"],
+        ["name=phone2", "name"],
+        ["css=#updatePrivatePersonal_phone2", "css:finder"],
+        ["xpath=//input[@id='updatePrivatePersonal_phone2']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "4039999999"
+    }, {
+      "id": "4497c977-cad1-4753-8f39-9e8cc8914ab0",
+      "comment": "",
+      "command": "click",
+      "target": "id=editPersonalInfoSubmit",
+      "targets": [
+        ["id=editPersonalInfoSubmit", "id"],
+        ["css=#editPersonalInfoSubmit", "css:finder"],
+        ["xpath=//input[@id='editPersonalInfoSubmit']", "xpath:attributes"],
+        ["xpath=//form[@id='updatePrivatePersonal']/div[5]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fb3a314-d00b-4498-9db7-749046a5e693",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.messageBoxHeader",
+      "targets": [
+        ["css=.messageBoxHeader", "css:finder"],
+        ["xpath=//div[@id='ppMessageBox']/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Your information has been updated')]", "xpath:innerText"]
+      ],
+      "value": "Your information has been updated"
+    }, {
+      "id": "bb9cd3c9-5bdf-4a3d-b838-62b774d34d3f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=li:nth-child(4) > strong",
+      "targets": [
+        ["css=li:nth-child(4) > strong", "css:finder"],
+        ["xpath=//div[@id='ppContentContainer']/div[3]/div[2]/div/ul/li[4]/strong", "xpath:idRelative"],
+        ["xpath=//li[4]/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Mobile number:')]", "xpath:innerText"]
+      ],
+      "value": "Mobile number:"
+    }]
+  }, {
+    "id": "8dfa13d9-7898-485b-b8e1-39cfa01376ea",
+    "name": "Input_Invalid_Postal_Code",
+    "commands": [{
+      "id": "f3229859-40c6-4f9e-8669-90523d350ee7",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ms/en_CA/customer-service/about-services/assembly/index.html?fbclid=IwAR0P7copmnZBjBQSx1vBLuQirQnwefkhSpNMmncaJetzB2tes0Kbq2hYS5U",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f1e13af-a57c-4101-873e-43b4c1766d32",
+      "comment": "",
+      "command": "click",
+      "target": "id=postalcodeinput",
+      "targets": [
+        ["id=postalcodeinput", "id"],
+        ["name=postalcodeinput", "name"],
+        ["css=#postalcodeinput", "css:finder"],
+        ["xpath=//input[@id='postalcodeinput']", "xpath:attributes"],
+        ["xpath=//div[@id='201543_assembly_00']/form/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10a34ce3-1c21-4182-ad40-1618f335ce51",
+      "comment": "",
+      "command": "type",
+      "target": "id=postalcodeinput",
+      "targets": [
+        ["id=postalcodeinput", "id"],
+        ["name=postalcodeinput", "name"],
+        ["css=#postalcodeinput", "css:finder"],
+        ["xpath=//input[@id='postalcodeinput']", "xpath:attributes"],
+        ["xpath=//div[@id='201543_assembly_00']/form/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": "T2N"
+    }, {
+      "id": "120f54bf-bcf8-4497-9e5b-669ab01c72a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=td img",
+      "targets": [
+        ["css=td img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea-canada.com/postalcodes2016/arrow.gif')]", "xpath:img"],
+        ["xpath=//div[@id='201543_assembly_00']/form/div/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a/img", "xpath:idRelative"],
+        ["xpath=//td[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f0427d1-18a7-4154-a8cd-e500c4af01cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=#postalcodecity > div:nth-child(1)",
+      "targets": [
+        ["css=#postalcodecity > div:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='postalcodecity']/div", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5e082b2-8e93-49e4-af5c-ba6985b30bf4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#postalcodecity > div:nth-child(1)",
+      "targets": [
+        ["css=#postalcodecity > div:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='postalcodecity']/div", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Please enter a valid postal code"
+    }]
+  }, {
+    "id": "042d03b7-4e1b-4ea2-93a7-fdd0df8f8aca",
+    "name": "Input_Valid_Postal_Code",
+    "commands": [{
+      "id": "2969807b-93b4-4de3-833d-e7d612313709",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ms/en_CA/customer-service/about-services/assembly/index.html?fbclid=IwAR0P7copmnZBjBQSx1vBLuQirQnwefkhSpNMmncaJetzB2tes0Kbq2hYS5U",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0552b0a7-2db2-4aa6-8db4-f2cc3ba5f80c",
+      "comment": "",
+      "command": "click",
+      "target": "id=postalcodeinput",
+      "targets": [
+        ["id=postalcodeinput", "id"],
+        ["name=postalcodeinput", "name"],
+        ["css=#postalcodeinput", "css:finder"],
+        ["xpath=//input[@id='postalcodeinput']", "xpath:attributes"],
+        ["xpath=//div[@id='201543_assembly_00']/form/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b604e76f-0f31-404f-b8eb-475f15145cfc",
+      "comment": "",
+      "command": "type",
+      "target": "id=postalcodeinput",
+      "targets": [
+        ["id=postalcodeinput", "id"],
+        ["name=postalcodeinput", "name"],
+        ["css=#postalcodeinput", "css:finder"],
+        ["xpath=//input[@id='postalcodeinput']", "xpath:attributes"],
+        ["xpath=//div[@id='201543_assembly_00']/form/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": "T2N1N4"
+    }, {
+      "id": "55cca0bd-8c2b-42b1-9698-583ec0e0a0b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=td img",
+      "targets": [
+        ["css=td img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea-canada.com/postalcodes2016/arrow.gif')]", "xpath:img"],
+        ["xpath=//div[@id='201543_assembly_00']/form/div/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a/img", "xpath:idRelative"],
+        ["xpath=//td[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "149a6949-8f6c-4965-ae07-aa5b001836b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#postalcodecity > div:nth-child(1)",
+      "targets": [
+        ["css=#postalcodecity > div:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='postalcodecity']/div", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c15aa2b-3911-474b-8ed3-913fd69463a0",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#postalcodecity > div:nth-child(1)",
+      "targets": [
+        ["css=#postalcodecity > div:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='postalcodecity']/div", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "There are 1 locations conveniently located near you."
+    }, {
+      "id": "82f492a0-9e2c-41b7-9be5-385add9fc0e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#postalcodecity > button",
+      "targets": [
+        ["css=#postalcodecity > button", "css:finder"],
+        ["xpath=//button[@onclick='opendropdown()']", "xpath:attributes"],
+        ["xpath=//div[@id='postalcodecity']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'--- please select ---')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d7b6140-464a-48ff-b271-8c0d3699fab3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@onclick=\"postalcode_track('assembly-postalcodes-selectlocation', 'calgary')\"]",
+      "targets": [
+        ["linkText=Calgary", "linkText"],
+        ["css=#myDropdown a", "css:finder"],
+        ["xpath=//a[contains(text(),'Calgary')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"postalcode_track('assembly-postalcodes-selectlocation', 'calgary')\"]", "xpath:attributes"],
+        ["xpath=//div[@id='myDropdown']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ms/en_CA/locator/calgary_services.html#services-scroll')]", "xpath:href"],
+        ["xpath=//form/div/div[2]/div[2]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Calgary')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6dd13f6c-b185-46a5-a74a-8273e6168686",
+      "comment": "Assert correct new page",
+      "command": "assertTitle",
+      "target": "IKEA Calgary Services for Kitchen, Home Delivery & More - IKEA",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0433fb7d-208a-43f1-9898-686a50687223",
+      "comment": "",
+      "command": "click",
+      "target": "id=ls2017",
+      "targets": [
+        ["id=ls2017", "id"],
+        ["css=#ls2017", "css:finder"],
+        ["xpath=//div[@id='ls2017']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a45ba162-d860-4c01-b30b-5e5e059c65e7",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@id='ls2017']/main/h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//div[@id='ls2017']/main/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'“Welcome to our Calgary family friendly store!”')]", "xpath:innerText"]
+      ],
+      "value": "“Welcome to our Calgary family friendly store!”"
+    }]
+  }, {
+    "id": "53a36770-12c8-4959-94f6-c745f3076ddc",
+    "name": "Input_Valid_Postal_Code_With_No_Nearby_Locations",
+    "commands": [{
+      "id": "811a3b10-3004-4718-a706-bb8c5971605d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ms/en_CA/customer-service/about-services/assembly/index.html?fbclid=IwAR0P7copmnZBjBQSx1vBLuQirQnwefkhSpNMmncaJetzB2tes0Kbq2hYS5U",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "502d944f-88b7-4ac1-88e1-4991b0b87ee8",
+      "comment": "",
+      "command": "click",
+      "target": "id=postalcodeinput",
+      "targets": [
+        ["id=postalcodeinput", "id"],
+        ["name=postalcodeinput", "name"],
+        ["css=#postalcodeinput", "css:finder"],
+        ["xpath=//input[@id='postalcodeinput']", "xpath:attributes"],
+        ["xpath=//div[@id='201543_assembly_00']/form/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c6b53e5-e33d-4566-a143-26f8a2c7256e",
+      "comment": "",
+      "command": "type",
+      "target": "id=postalcodeinput",
+      "targets": [
+        ["id=postalcodeinput", "id"],
+        ["name=postalcodeinput", "name"],
+        ["css=#postalcodeinput", "css:finder"],
+        ["xpath=//input[@id='postalcodeinput']", "xpath:attributes"],
+        ["xpath=//div[@id='201543_assembly_00']/form/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": "X1A2N8"
+    }, {
+      "id": "21500ec0-72a4-4051-bb5e-5b0d81e4d55e",
+      "comment": "",
+      "command": "click",
+      "target": "css=td img",
+      "targets": [
+        ["css=td img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.ikea-canada.com/postalcodes2016/arrow.gif')]", "xpath:img"],
+        ["xpath=//div[@id='201543_assembly_00']/form/div/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a/img", "xpath:idRelative"],
+        ["xpath=//td[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d46ff83c-524c-4ca0-ac0a-b6e63abae014",
+      "comment": "",
+      "command": "click",
+      "target": "css=#postalcodecity > div:nth-child(1)",
+      "targets": [
+        ["css=#postalcodecity > div:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='postalcodecity']/div", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9ecde59-a427-453a-8b08-daa4eb2113c7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#postalcodecity > div",
+      "targets": [
+        ["css=#postalcodecity > div", "css:finder"],
+        ["xpath=//div[@id='postalcodecity']/div", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "We currently do not have any providers that service this\\narea and regret any inconvenience this may cause."
+    }]
+  }, {
+    "id": "25fb7b94-4acb-4cc3-bc6f-9a9df3f4aaf7",
+    "name": "Modify_Product",
+    "commands": [{
+      "id": "3de8f8a6-7fd2-446a-8441-94f034420f71",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay?storeId=3&langId=-15",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed05e8c9-1055-4762-bdc5-b0985a8bf97c",
+      "comment": "",
+      "command": "type",
+      "target": "id=partNumber",
+      "targets": [
+        ["id=partNumber", "id"],
+        ["name=partNumber", "name"],
+        ["css=#partNumber", "css:finder"],
+        ["xpath=//input[@id='partNumber']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "702.992.85"
+    }, {
+      "id": "712862d1-4dcc-48b4-ada0-808ef76ae43a",
+      "comment": "",
+      "command": "click",
+      "target": "id=formShoppingListLeftNav",
+      "targets": [
+        ["id=formShoppingListLeftNav", "id"],
+        ["name=formShoppingListLeftNav", "name"],
+        ["css=#formShoppingListLeftNav", "css:finder"],
+        ["xpath=//form[@id='formShoppingListLeftNav']", "xpath:attributes"],
+        ["xpath=//div[@id='shoppingList']/div/div[5]/div/form", "xpath:idRelative"],
+        ["xpath=//div[5]/div/form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "454522e0-74f6-48ff-a76b-542e913493e2",
+      "comment": "",
+      "command": "type",
+      "target": "id=quantity",
+      "targets": [
+        ["id=quantity", "id"],
+        ["name=quantity", "name"],
+        ["css=#quantity", "css:finder"],
+        ["xpath=//input[@id='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input[2]", "xpath:idRelative"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "3e96a20d-ecc4-4811-ae96-3c6165ea5584",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jsButton_ShoppingList_01 input",
+      "targets": [
+        ["css=#jsButton_ShoppingList_01 input", "css:finder"],
+        ["xpath=//input[@value='Add product']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_ShoppingList_01']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2762b96a-68bc-4f1a-ad99-f0637e5730dd",
+      "comment": "",
+      "command": "click",
+      "target": "id=tr_70299285",
+      "targets": [
+        ["id=tr_70299285", "id"],
+        ["css=#tr_70299285", "css:finder"],
+        ["xpath=//tr[@id='tr_70299285']", "xpath:attributes"],
+        ["xpath=//table[@id='tblShoppingList']/tbody/tr[2]", "xpath:idRelative"],
+        ["xpath=//tr[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5670642f-bba9-4107-ba20-bbca96a9b2fb",
+      "comment": "",
+      "command": "type",
+      "target": "id=quantity_929686",
+      "targets": [
+        ["id=quantity_929686", "id"],
+        ["name=quantity_929686", "name"],
+        ["css=#quantity_929686", "css:finder"],
+        ["xpath=//input[@id='quantity_929686']", "xpath:attributes"],
+        ["xpath=//tr[@id='tr_70299285']/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//td[2]/div/input", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "1c51a9c3-b0b3-47d9-9d68-4c28515861b8",
+      "comment": "",
+      "command": "click",
+      "target": "id=updateLink_929686",
+      "targets": [
+        ["id=updateLink_929686", "id"],
+        ["linkText=Update", "linkText"],
+        ["css=#updateLink_929686", "css:finder"],
+        ["xpath=//a[contains(text(),'Update')]", "xpath:link"],
+        ["xpath=//a[@id='updateLink_929686']", "xpath:attributes"],
+        ["xpath=//tr[@id='tr_70299285']/td[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:updateQuantity('929686', 353055412, '70299285', 3, -15)\")]", "xpath:href"],
+        ["xpath=//td[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "546a0afc-580e-4e87-a458-0961ac4b519f",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "xpath=//input[@id='quantity_929686']",
+      "targets": [
+        ["id=quantity_929686", "id"],
+        ["name=quantity_929686", "name"],
+        ["css=#quantity_929686", "css:finder"],
+        ["xpath=//input[@id='quantity_929686']", "xpath:attributes"],
+        ["xpath=//tr[@id='tr_70299285']/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//td[2]/div/input", "xpath:position"]
+      ],
+      "value": "10"
+    }]
+  }, {
+    "id": "37e58b40-7356-479e-a57a-aabb3cc9abb3",
+    "name": "Remove_Product",
+    "commands": [{
+      "id": "860e77f6-85ca-4dda-8678-396a03aad77f",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay?storeId=3&langId=-15",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "304cdb50-e215-456d-9361-db00c207307e",
+      "comment": "",
+      "command": "type",
+      "target": "id=partNumber",
+      "targets": [
+        ["id=partNumber", "id"],
+        ["name=partNumber", "name"],
+        ["css=#partNumber", "css:finder"],
+        ["xpath=//input[@id='partNumber']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "702.992.85"
+    }, {
+      "id": "8ffcfe90-084c-4af1-ad9b-4be70731fb6d",
+      "comment": "",
+      "command": "click",
+      "target": "id=formShoppingListLeftNav",
+      "targets": [
+        ["id=formShoppingListLeftNav", "id"],
+        ["name=formShoppingListLeftNav", "name"],
+        ["css=#formShoppingListLeftNav", "css:finder"],
+        ["xpath=//form[@id='formShoppingListLeftNav']", "xpath:attributes"],
+        ["xpath=//div[@id='shoppingList']/div/div[5]/div/form", "xpath:idRelative"],
+        ["xpath=//div[5]/div/form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43414030-1cf9-491e-b491-3896de99758b",
+      "comment": "",
+      "command": "type",
+      "target": "id=quantity",
+      "targets": [
+        ["id=quantity", "id"],
+        ["name=quantity", "name"],
+        ["css=#quantity", "css:finder"],
+        ["xpath=//input[@id='quantity']", "xpath:attributes"],
+        ["xpath=//form[@id='formShoppingListLeftNav']/input[2]", "xpath:idRelative"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "03deb93b-c048-4336-915c-23a2bbba2efe",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jsButton_ShoppingList_01 input",
+      "targets": [
+        ["css=#jsButton_ShoppingList_01 input", "css:finder"],
+        ["xpath=//input[@value='Add product']", "xpath:attributes"],
+        ["xpath=//a[@id='jsButton_ShoppingList_01']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div/a/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "167d058d-09be-49f5-a7e5-e4547c9f748a",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//td/div/a/span",
+      "targets": [
+        ["css=.prodName", "css:finder"],
+        ["xpath=//tr[@id='tr_70299285']/td/div/a/span", "xpath:idRelative"],
+        ["xpath=//td/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'TUFFING')]", "xpath:innerText"]
+      ],
+      "value": "TUFFING"
+    }, {
+      "id": "87ba3e18-88e9-40d5-9e2f-c51b7d751874",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//td/div/a/span[2]",
+      "targets": [
+        ["css=.prodDesc", "css:finder"],
+        ["xpath=//tr[@id='tr_70299285']/td/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//td/div/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Bunk bed frame')]", "xpath:innerText"]
+      ],
+      "value": "Bunk bed frame"
+    }, {
+      "id": "4c095b8a-d47e-4fd2-bb15-d9edc65dd865",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=price_70299285",
+      "targets": [
+        ["id=price_70299285", "id"],
+        ["css=#price_70299285", "css:finder"],
+        ["xpath=//span[@id='price_70299285']", "xpath:attributes"],
+        ["xpath=//tr[@id='tr_70299285']/td/div/span", "xpath:idRelative"],
+        ["xpath=//td/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'$189.00')]", "xpath:innerText"]
+      ],
+      "value": "$189.00"
+    }, {
+      "id": "01f95857-56fe-443e-87ad-e0508e06fd43",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "id=quantity_929686",
+      "targets": [
+        ["id=quantity_929686", "id"],
+        ["name=quantity_929686", "name"],
+        ["css=#quantity_929686", "css:finder"],
+        ["xpath=//input[@id='quantity_929686']", "xpath:attributes"],
+        ["xpath=//tr[@id='tr_70299285']/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//td[2]/div/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "210710da-b118-4bfb-9804-34ba5e8e9ac2",
+      "comment": "",
+      "command": "click",
+      "target": "id=removeLink_929686",
+      "targets": [
+        ["id=removeLink_929686", "id"],
+        ["linkText=Remove", "linkText"],
+        ["css=#removeLink_929686", "css:finder"],
+        ["xpath=//a[contains(text(),'Remove')]", "xpath:link"],
+        ["xpath=//a[@id='removeLink_929686']", "xpath:attributes"],
+        ["xpath=//tr[@id='tr_70299285']/td[2]/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:removeItemFromShoppingList('353055412', '70299285', '929686', 3, -15)\")]", "xpath:href"],
+        ["xpath=//td[2]/div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d908c96e-8003-4e71-bbc9-b65c87b62a32",
+      "comment": "stalling",
+      "command": "click",
+      "target": "id=stockNote",
+      "targets": [
+        ["id=stockNote", "id"],
+        ["css=#stockNote", "css:finder"],
+        ["xpath=//div[@id='stockNote']", "xpath:attributes"],
+        ["xpath=//tr[@id='anonymous_element_2']/td/div", "xpath:idRelative"],
+        ["xpath=//tfoot/tr/td/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d359318-688c-4768-a2d5-899968b6905c",
+      "comment": "stalling",
+      "command": "click",
+      "target": "id=stock_info_S19214322",
+      "targets": [
+        ["id=stock_info_S19214322", "id"],
+        ["css=#stock_info_S19214322", "css:finder"],
+        ["xpath=//div[@id='stock_info_S19214322']", "xpath:attributes"],
+        ["xpath=//tr[@id='anonymous_element_2']/td/div[2]", "xpath:idRelative"],
+        ["xpath=//tfoot/tr/td/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b4df441-33dc-4134-ab0e-9d97d923ef3f",
+      "comment": "stalling for reload",
+      "command": "click",
+      "target": "id=stock_info_S19214322",
+      "targets": [
+        ["id=stock_info_S19214322", "id"],
+        ["css=#stock_info_S19214322", "css:finder"],
+        ["xpath=//div[@id='stock_info_S19214322']", "xpath:attributes"],
+        ["xpath=//tr[@id='anonymous_element_2']/td/div[2]", "xpath:idRelative"],
+        ["xpath=//tfoot/tr/td/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f0dc96f-ba39-4023-9956-9884b05cc5b0",
+      "comment": "stalling",
+      "command": "click",
+      "target": "id=stockNote",
+      "targets": [
+        ["id=stockNote", "id"],
+        ["css=#stockNote", "css:finder"],
+        ["xpath=//div[@id='stockNote']", "xpath:attributes"],
+        ["xpath=//tr[@id='anonymous_element_2']/td/div", "xpath:idRelative"],
+        ["xpath=//tfoot/tr/td/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1903451-2b9c-4cb5-8c85-d27d518bbb2b",
+      "comment": "assert test product not present",
+      "command": "assertElementNotPresent",
+      "target": "css=#tr_70299285 .prodName",
+      "targets": [
+        ["css=#tr_70299285 .prodName", "css:finder"],
+        ["xpath=//tr[@id='tr_70299285']/td/div/a/span", "xpath:idRelative"],
+        ["xpath=//td/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'TUFFING')]", "xpath:innerText"]
+      ],
+      "value": "TUFFING"
+    }]
   }],
   "suites": [{
     "id": "e2701b7d-93b0-490d-b88b-2fa5adaa6b0a",
@@ -1482,7 +3390,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["c501d796-2e65-4dd4-8222-9a9d1e667c14", "2b015ae3-f3d2-4492-b49c-641c34bd402c", "f7b1a360-39d9-409c-b6b4-c6b4a793d535"]
+    "tests": ["c501d796-2e65-4dd4-8222-9a9d1e667c14", "2b015ae3-f3d2-4492-b49c-641c34bd402c"]
   }, {
     "id": "30e0c25c-b3cc-45c9-a42c-7261463756dd",
     "name": "Search Suite",
@@ -1510,8 +3418,22 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": []
+    "tests": ["737c2d2b-bbd1-4862-bd76-4f25433e59b7", "b549c65f-d77b-46cc-b082-0ece548a8c22", "13c3009e-566e-4df6-8ff8-6cb04316f47f", "82c4b5bf-24b9-465c-921e-d5a97572a660", "962e3dbe-0a0a-425a-8cd9-f00f838353e2", "3885948a-16f6-4aab-9ece-3de6ee9d16d0", "25fb7b94-4acb-4cc3-bc6f-9a9df3f4aaf7", "37e58b40-7356-479e-a57a-aabb3cc9abb3"]
+  }, {
+    "id": "d7ff589e-e50d-4c71-b10d-b8c1fe5b4a06",
+    "name": "Edit Personal Information Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["886fe126-03d8-473d-b1de-aa9778e8ffda", "fcdb39df-1a20-47ad-86da-a03908ec9aa3", "455643b8-bdb9-471e-8000-233196e78d82", "2ee477a7-289f-424a-8cbc-c17baca09994", "f30c819e-045a-423d-b4af-9689a2383fe9", "7311ab78-7e9f-4eaa-868c-e3e55c9853d2"]
+  }, {
+    "id": "61016c14-3385-4a56-bc2d-e0ea722aab07",
+    "name": "Assembly Location Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8dfa13d9-7898-485b-b8e1-39cfa01376ea", "042d03b7-4e1b-4ea2-93a7-fdd0df8f8aca", "53a36770-12c8-4959-94f6-c745f3076ddc"]
   }],
-  "urls": ["http://ikea.ca/", "https://www.ikea.com/ca/en/catalog/products/20391658/", "https://www.ikea.com/ca/en/", "https://www.ikea.com/ms/en_CA/customer-service/about-services/getting-it-home/index_delivery_pick-up.html", "https://www.ikea.com/"],
+  "urls": ["http://ikea.ca/", "https://www.ikea.com/ca/en/catalog/products/20391658/", "https://www.ikea.com/ca/en/", "https://www.ikea.com/ms/en_CA/customer-service/about-services/getting-it-home/index_delivery_pick-up.html", "https://www.ikea.com/", "https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay?storeId=3&langId=-15"],
   "plugins": []
 }
